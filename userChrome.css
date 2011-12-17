@@ -1,0 +1,21 @@
+/* アドオンバーを閉じるボタンを非表示にする */
+#addonbar-closebutton {
+   display: none !important;
+}
+
+/* アドオンバーの中にリンク先URLを埋め込み */
+#main-window:not([inFullscreen]) #statusbar-display {
+   margin-top: -17px !important; /* OS環境によっては数値の微調整が必要 */
+   max-width: 80% !important;
+}
+#main-window:not([inFullscreen]) .statuspanel-label {
+   background: transparent !important;
+   border: none !important;
+}
+
+/* ページ内検索バーを表示の時にもアドオンバー内の左側に表示させる */
+#main-window:not([inFullscreen]) #statusbar-display[mirror="true"] {
+   position: fixed !important;
+   left: -12px !important; /* OS環境によっては数値の微調整が必要 */
+   margin-top: 11px !important; /* OS環境によっては数値の微調整が必要 */
+}
